@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_60c56815cdaea9b73b0017f0a13271ee {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_60c56815cdaea9b73b0017f0a13271ee" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_60c56815cdaea9b73b0017f0a13271ee = L.map(
+                "map_60c56815cdaea9b73b0017f0a13271ee",
+                {
+                    center: [49.6116, 6.1319],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+// Считываем ключ из ссылки, а если его нет — подставляем ваш рабочий ключ автоматически
+    const urlParams = new URLSearchParams(window.location.search);
+    const apiKey = urlParams.get('key') || 'cb1_4we6_1_586b2a61bf83033ced6f1630';
+
+    // Используем официальный шаблон CARTO для Voyager с правильным параметром ?key=
+    let tileUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=" + apiKey;
+
+    var tile_layer_42883ab2faa1a7a60d874224e4b40fe4 = L.tileLayer(
+        tileUrl,
+        {
+            "minZoom": 0,
+            "maxZoom": 20,
+            "maxNativeZoom": 20,
+            "noWrap": false,
+            "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>",
+            "subdomains": "abcd",
+            "detectRetina": false,
+            "tms": false,
+            "opacity": 1,
+        }
+    );
+        
+    
+            tile_layer_42883ab2faa1a7a60d874224e4b40fe4.addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+            var circle_marker_5d6e80caffd5015795f29e4ec708e8c3 = L.circleMarker(
+                [49.6022446, 6.1327978],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_b407b5f4cffc1e720439a25e8d5322ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_489dd384239a18c5897005287aecb37f = $(`<div id="html_489dd384239a18c5897005287aecb37f" style="width: 100.0%; height: 100.0%;"><b>Fischer, Jean-Bapt.</b><br>Адрес: Avenue de la Gare, 46</div>`)[0];
+                popup_b407b5f4cffc1e720439a25e8d5322ba.setContent(html_489dd384239a18c5897005287aecb37f);
+            
+        
+
+        circle_marker_5d6e80caffd5015795f29e4ec708e8c3.bindPopup(popup_b407b5f4cffc1e720439a25e8d5322ba)
+        ;
+
+        
+    
+    
+            var circle_marker_5f1c42ab6995751c3565bf58adffaa91 = L.circleMarker(
+                [49.605161, 6.1308242],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_c1401a5110a1029482415edd17dfcea0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c250ed33f1350f3a7a3256a99eb0af8b = $(`<div id="html_c250ed33f1350f3a7a3256a99eb0af8b" style="width: 100.0%; height: 100.0%;"><b>Engler, Joseph</b><br>Адрес: Rue Heine, 10</div>`)[0];
+                popup_c1401a5110a1029482415edd17dfcea0.setContent(html_c250ed33f1350f3a7a3256a99eb0af8b);
+            
+        
+
+        circle_marker_5f1c42ab6995751c3565bf58adffaa91.bindPopup(popup_c1401a5110a1029482415edd17dfcea0)
+        ;
+
+        
+    
+    
+            var circle_marker_d0ac886294201b733d43ff8d0b149637 = L.circleMarker(
+                [49.6106173, 6.1308884],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_ff9bbfcc3cc75f71cfd514fd65f4c0b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c689155eb16746991e8dd3b20e2844a = $(`<div id="html_0c689155eb16746991e8dd3b20e2844a" style="width: 100.0%; height: 100.0%;"><b>Friedrich, Jean-Pierre</b><br>Адрес: Place Guillaume II </div>`)[0];
+                popup_ff9bbfcc3cc75f71cfd514fd65f4c0b9.setContent(html_0c689155eb16746991e8dd3b20e2844a);
+            
+        
+
+        circle_marker_d0ac886294201b733d43ff8d0b149637.bindPopup(popup_ff9bbfcc3cc75f71cfd514fd65f4c0b9)
+        ;
+
+        
+    
+    
+            var circle_marker_6962f1a720475c1e4cec2ff766e09981 = L.circleMarker(
+                [49.6072008, 6.1209522],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_7467030f92f3cac1fa99dbe272d7ed10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d8205f897f2e8112a2e6ec62033be37 = $(`<div id="html_9d8205f897f2e8112a2e6ec62033be37" style="width: 100.0%; height: 100.0%;"><b>Schneider, Ernest</b><br>Адрес: Avenue Marie Thérèse, 24</div>`)[0];
+                popup_7467030f92f3cac1fa99dbe272d7ed10.setContent(html_9d8205f897f2e8112a2e6ec62033be37);
+            
+        
+
+        circle_marker_6962f1a720475c1e4cec2ff766e09981.bindPopup(popup_7467030f92f3cac1fa99dbe272d7ed10)
+        ;
+
+        
+    
+    
+            var circle_marker_4ca43b832f8cb080e2e264eea681d650 = L.circleMarker(
+                [49.6122324, 6.1264016],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_c32734caecdd4ae2297239ccc247afea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17ae3725777b1e2c2de25432e798193d = $(`<div id="html_17ae3725777b1e2c2de25432e798193d" style="width: 100.0%; height: 100.0%;"><b>Fixmer, Nicolas</b><br>Адрес: Grand rue 90</div>`)[0];
+                popup_c32734caecdd4ae2297239ccc247afea.setContent(html_17ae3725777b1e2c2de25432e798193d);
+            
+        
+
+        circle_marker_4ca43b832f8cb080e2e264eea681d650.bindPopup(popup_c32734caecdd4ae2297239ccc247afea)
+        ;
+
+        
+    
+    
+            var circle_marker_5d311eb4e778782df33a60aa4165690a = L.circleMarker(
+                [49.6046215, 6.1309719],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_30ec0c5ecbe28b831e044bbaf0142f6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cba4efe97c6ba9f4cb671c59daaf045 = $(`<div id="html_8cba4efe97c6ba9f4cb671c59daaf045" style="width: 100.0%; height: 100.0%;"><b>Muller, Marcel</b><br>Адрес: rue dicks</div>`)[0];
+                popup_30ec0c5ecbe28b831e044bbaf0142f6a.setContent(html_8cba4efe97c6ba9f4cb671c59daaf045);
+            
+        
+
+        circle_marker_5d311eb4e778782df33a60aa4165690a.bindPopup(popup_30ec0c5ecbe28b831e044bbaf0142f6a)
+        ;
+
+        
+    
+    
+            var circle_marker_b4002f5bb9b9badb8248b69a96a80bf9 = L.circleMarker(
+                [49.6114614, 6.1268209],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_94f321500a665fa6cdff70b0d038475a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_356044f48a0d7e1e597a207ba6e2bd72 = $(`<div id="html_356044f48a0d7e1e597a207ba6e2bd72" style="width: 100.0%; height: 100.0%;"><b>Reckinger, Adolphe</b><br>Адрес: rue Aldringen</div>`)[0];
+                popup_94f321500a665fa6cdff70b0d038475a.setContent(html_356044f48a0d7e1e597a207ba6e2bd72);
+            
+        
+
+        circle_marker_b4002f5bb9b9badb8248b69a96a80bf9.bindPopup(popup_94f321500a665fa6cdff70b0d038475a)
+        ;
+
+        
+    
+    
+            var circle_marker_6d15a66a5aef846941b74a76b9cad5f1 = L.circleMarker(
+                [49.6028572, 6.1315815],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_f191907df803fdae4447450719682831 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6c0eece164767d6f31affd727daefbda = $(`<div id="html_6c0eece164767d6f31affd727daefbda" style="width: 100.0%; height: 100.0%;"><b>Weber, Alfred</b><br>Адрес: avenue de la Liberte, 35</div>`)[0];
+                popup_f191907df803fdae4447450719682831.setContent(html_6c0eece164767d6f31affd727daefbda);
+            
+        
+
+        circle_marker_6d15a66a5aef846941b74a76b9cad5f1.bindPopup(popup_f191907df803fdae4447450719682831)
+        ;
+
+        
+    
+    
+            var circle_marker_65869c0119a08c54715ef8001e90aa37 = L.circleMarker(
+                [49.612434, 6.1272146],
+                {"bubblingMouseEvents": true, "color": "#A0A0A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A0A0A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_6d88cb8639a04e103b0d4003a5a19128 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2732319c501f956ffffab20cfce16909 = $(`<div id="html_2732319c501f956ffffab20cfce16909" style="width: 100.0%; height: 100.0%;"><b>Dauphin, Marcelle</b><br>Old address: Grand Rue, 84</div>`)[0];
+                popup_6d88cb8639a04e103b0d4003a5a19128.setContent(html_2732319c501f956ffffab20cfce16909);
+            
+        
+
+        circle_marker_65869c0119a08c54715ef8001e90aa37.bindPopup(popup_6d88cb8639a04e103b0d4003a5a19128)
+        ;
+
+        
+    
+    
+            var circle_marker_b49dbc32b8e8d850d741f4c379e9dd3b = L.circleMarker(
+                [49.6099352, 6.1271781],
+                {"bubblingMouseEvents": true, "color": "#1A1A1A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1A1A1A", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_6ea228bc88061bd1d2c74da2ba92de6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3227bbebe4435c2d76503897246331d = $(`<div id="html_c3227bbebe4435c2d76503897246331d" style="width: 100.0%; height: 100.0%;"><b>Dauphin, Marcelle</b><br>New address: rue NOTRE DAME, 38</div>`)[0];
+                popup_6ea228bc88061bd1d2c74da2ba92de6f.setContent(html_c3227bbebe4435c2d76503897246331d);
+            
+        
+
+        circle_marker_b49dbc32b8e8d850d741f4c379e9dd3b.bindPopup(popup_6ea228bc88061bd1d2c74da2ba92de6f)
+        ;
+
+        
+    
+    
+            var poly_line_40f7a86cb5c3ffa164113d3898e4329f = L.polyline(
+                [[49.612434, 6.1272146], [49.6099352, 6.1271781]],
+                {"bubblingMouseEvents": true, "color": "#555555", "dashArray": "3, 6", "dashOffset": null, "fill": false, "fillColor": "#555555", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+            var circle_marker_b39383656305dc355bb0e6e810126945 = L.circleMarker(
+                [49.6097662, 6.1265499],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_1df5435c40425e3810793f04d6a6531a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31cdb9714cb18689597cd8ea1c8c1f80 = $(`<div id="html_31cdb9714cb18689597cd8ea1c8c1f80" style="width: 100.0%; height: 100.0%;"><b>Thorn, Victor</b><br>Адрес: Boulevard Royal 59</div>`)[0];
+                popup_1df5435c40425e3810793f04d6a6531a.setContent(html_31cdb9714cb18689597cd8ea1c8c1f80);
+            
+        
+
+        circle_marker_b39383656305dc355bb0e6e810126945.bindPopup(popup_1df5435c40425e3810793f04d6a6531a)
+        ;
+
+        
+    
+    
+            var circle_marker_e8a79fbc4699da5dff0eb9364c7b2819 = L.circleMarker(
+                [49.6114387, 6.1319903],
+                {"bubblingMouseEvents": true, "color": "#A0A0A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A0A0A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_2454ddf4588764fff61aa40a60df04c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c9133523be82a443a0e0a23c5ad4e09 = $(`<div id="html_8c9133523be82a443a0e0a23c5ad4e09" style="width: 100.0%; height: 100.0%;"><b>Campill, Ferdinand</b><br>Old address: 5bis Rue du Curé</div>`)[0];
+                popup_2454ddf4588764fff61aa40a60df04c1.setContent(html_8c9133523be82a443a0e0a23c5ad4e09);
+            
+        
+
+        circle_marker_e8a79fbc4699da5dff0eb9364c7b2819.bindPopup(popup_2454ddf4588764fff61aa40a60df04c1)
+        ;
+
+        
+    
+    
+            var circle_marker_e9df4395b87b265ebbe0da6ffae5dd4f = L.circleMarker(
+                [49.6098781, 6.1290888],
+                {"bubblingMouseEvents": true, "color": "#1A1A1A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1A1A1A", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_26c135852f53a47c9b2ef2d6c33f4f2f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63b56e65703f313331a8ed2a0769027c = $(`<div id="html_63b56e65703f313331a8ed2a0769027c" style="width: 100.0%; height: 100.0%;"><b>Campill, Ferdinand</b><br>New address: rue Notre-Dame 23</div>`)[0];
+                popup_26c135852f53a47c9b2ef2d6c33f4f2f.setContent(html_63b56e65703f313331a8ed2a0769027c);
+            
+        
+
+        circle_marker_e9df4395b87b265ebbe0da6ffae5dd4f.bindPopup(popup_26c135852f53a47c9b2ef2d6c33f4f2f)
+        ;
+
+        
+    
+    
+            var poly_line_d9acdd304306e8a1e5a5c4e2c5957de7 = L.polyline(
+                [[49.6114387, 6.1319903], [49.6098781, 6.1290888]],
+                {"bubblingMouseEvents": true, "color": "#555555", "dashArray": "3, 6", "dashOffset": null, "fill": false, "fillColor": "#555555", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+            var circle_marker_65836257bf2061486e5ac746ec7e5e80 = L.circleMarker(
+                [49.6107125, 6.1275723],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_05cb190706a63723b8904f5767d2e2af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa63dc1ad9d9185b94ab869573f328da = $(`<div id="html_aa63dc1ad9d9185b94ab869573f328da" style="width: 100.0%; height: 100.0%;"><b>Thewes, Charles</b><br>Адрес: avenue Monterey, 17</div>`)[0];
+                popup_05cb190706a63723b8904f5767d2e2af.setContent(html_aa63dc1ad9d9185b94ab869573f328da);
+            
+        
+
+        circle_marker_65836257bf2061486e5ac746ec7e5e80.bindPopup(popup_05cb190706a63723b8904f5767d2e2af)
+        ;
+
+        
+    
+    
+            var circle_marker_7cf24b5e4700375f4a75f7979b26f7d3 = L.circleMarker(
+                [49.6118335, 6.1298832],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_a8733732673d2060de5e16c40d83a6dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b633573f022c968fc10bc5eeff684e44 = $(`<div id="html_b633573f022c968fc10bc5eeff684e44" style="width: 100.0%; height: 100.0%;"><b>Michel, Théodore</b><br>Адрес: Grand rue 47</div>`)[0];
+                popup_a8733732673d2060de5e16c40d83a6dd.setContent(html_b633573f022c968fc10bc5eeff684e44);
+            
+        
+
+        circle_marker_7cf24b5e4700375f4a75f7979b26f7d3.bindPopup(popup_a8733732673d2060de5e16c40d83a6dd)
+        ;
+
+        
+    
+    
+            var circle_marker_304425b2d2b83994d682619458281ef7 = L.circleMarker(
+                [49.6116081, 6.1292388],
+                {"bubblingMouseEvents": true, "color": "#A0A0A0", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A0A0A0", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_c82a27d5ffe07d936eff38b68d4426c5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce5db9f7f7e67126e27c7790f01d6755 = $(`<div id="html_ce5db9f7f7e67126e27c7790f01d6755" style="width: 100.0%; height: 100.0%;"><b>Philippart, Hélène (ép. Stoltz)</b><br>Old address: Place D'Armes, 6</div>`)[0];
+                popup_c82a27d5ffe07d936eff38b68d4426c5.setContent(html_ce5db9f7f7e67126e27c7790f01d6755);
+            
+        
+
+        circle_marker_304425b2d2b83994d682619458281ef7.bindPopup(popup_c82a27d5ffe07d936eff38b68d4426c5)
+        ;
+
+        
+    
+    
+            var circle_marker_c3ed3472ec2fba0580997266afc499dd = L.circleMarker(
+                [49.6229065, 6.130356],
+                {"bubblingMouseEvents": true, "color": "#1A1A1A", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1A1A1A", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_8b05fd5ed8cc425f715f757364b5a7a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc385343136621478a5f40bb78c3ac80 = $(`<div id="html_bc385343136621478a5f40bb78c3ac80" style="width: 100.0%; height: 100.0%;"><b>Philippart, Hélène (ép. Stoltz)</b><br>New address: Cote d'Eich, 7</div>`)[0];
+                popup_8b05fd5ed8cc425f715f757364b5a7a3.setContent(html_bc385343136621478a5f40bb78c3ac80);
+            
+        
+
+        circle_marker_c3ed3472ec2fba0580997266afc499dd.bindPopup(popup_8b05fd5ed8cc425f715f757364b5a7a3)
+        ;
+
+        
+    
+    
+            var poly_line_04847065ebffc224864925ace64c3960 = L.polyline(
+                [[49.6116081, 6.1292388], [49.6229065, 6.130356]],
+                {"bubblingMouseEvents": true, "color": "#555555", "dashArray": "3, 6", "dashOffset": null, "fill": false, "fillColor": "#555555", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 1.5}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+            var circle_marker_9f592ad653d26209ab3ba4633ecfe4d4 = L.circleMarker(
+                [49.6116524, 6.1270291],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_69208d7f0e7b252c6c088519fe520bac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4484f963471e1b5711964c2b16a82f82 = $(`<div id="html_4484f963471e1b5711964c2b16a82f82" style="width: 100.0%; height: 100.0%;"><b>Weinacht, Théodore</b><br>Адрес: rue Aldringer, 19</div>`)[0];
+                popup_69208d7f0e7b252c6c088519fe520bac.setContent(html_4484f963471e1b5711964c2b16a82f82);
+            
+        
+
+        circle_marker_9f592ad653d26209ab3ba4633ecfe4d4.bindPopup(popup_69208d7f0e7b252c6c088519fe520bac)
+        ;
+
+        
+    
+    
+            var circle_marker_075de3772b51ed46ba5779edf6d972fb = L.circleMarker(
+                [49.6106173, 6.1308884],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_721b5eeafabcb6204c9ea1a57e7a085f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3385e0cf410d850a65244ab77719d857 = $(`<div id="html_3385e0cf410d850a65244ab77719d857" style="width: 100.0%; height: 100.0%;"><b>Heisbourg, Paul</b><br>Адрес: Place Guillaume 7</div>`)[0];
+                popup_721b5eeafabcb6204c9ea1a57e7a085f.setContent(html_3385e0cf410d850a65244ab77719d857);
+            
+        
+
+        circle_marker_075de3772b51ed46ba5779edf6d972fb.bindPopup(popup_721b5eeafabcb6204c9ea1a57e7a085f)
+        ;
+
+        
+    
+    
+            var circle_marker_ade4a9b03446ba4ba71fbf80d2398dcd = L.circleMarker(
+                [49.6028572, 6.1315815],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_35f52ae0556926541a1886c70b89a481 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74c2d64c3bae6463b67b5f8ac759a079 = $(`<div id="html_74c2d64c3bae6463b67b5f8ac759a079" style="width: 100.0%; height: 100.0%;"><b>Leesch, Robert</b><br>Адрес: Avenue de la liberté, 35</div>`)[0];
+                popup_35f52ae0556926541a1886c70b89a481.setContent(html_74c2d64c3bae6463b67b5f8ac759a079);
+            
+        
+
+        circle_marker_ade4a9b03446ba4ba71fbf80d2398dcd.bindPopup(popup_35f52ae0556926541a1886c70b89a481)
+        ;
+
+        
+    
+    
+            var circle_marker_6794349ebd9905af76fb1866c931b717 = L.circleMarker(
+                [49.60124, 6.1325649],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_b3fd9df1747222e7a1d0e2bdc1504fa6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5a381a879550806c2fbfcff25db68d5 = $(`<div id="html_c5a381a879550806c2fbfcff25db68d5" style="width: 100.0%; height: 100.0%;"><b>Trierweiler, Jeanne (ép. Elvinger)</b><br>Адрес: Avenue de la Liberté, 74</div>`)[0];
+                popup_b3fd9df1747222e7a1d0e2bdc1504fa6.setContent(html_c5a381a879550806c2fbfcff25db68d5);
+            
+        
+
+        circle_marker_6794349ebd9905af76fb1866c931b717.bindPopup(popup_b3fd9df1747222e7a1d0e2bdc1504fa6)
+        ;
+
+        
+    
+    
+            var circle_marker_3de16caa0fb3ae2378e8dc968b8a2fb4 = L.circleMarker(
+                [49.6017824, 6.1336345],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_a36dcc3974b48228eaf592355facc86b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04ef2f0600f01f047ff91d0ef7148ed3 = $(`<div id="html_04ef2f0600f01f047ff91d0ef7148ed3" style="width: 100.0%; height: 100.0%;"><b>Folmer, Adolphe</b><br>Адрес: Avenue de la Gare, 57</div>`)[0];
+                popup_a36dcc3974b48228eaf592355facc86b.setContent(html_04ef2f0600f01f047ff91d0ef7148ed3);
+            
+        
+
+        circle_marker_3de16caa0fb3ae2378e8dc968b8a2fb4.bindPopup(popup_a36dcc3974b48228eaf592355facc86b)
+        ;
+
+        
+    
+    
+            var circle_marker_c06f3f646de5d2540ee809c7659fbcbb = L.circleMarker(
+                [49.6120903, 6.1301755],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_37d0dcbfa2ddbad567448ef4c98e1e57 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad4fca9610abbb644d88cef59d0cfcce = $(`<div id="html_ad4fca9610abbb644d88cef59d0cfcce" style="width: 100.0%; height: 100.0%;"><b>Schiltz, Lucien</b><br>Адрес: 36 Grand rue</div>`)[0];
+                popup_37d0dcbfa2ddbad567448ef4c98e1e57.setContent(html_ad4fca9610abbb644d88cef59d0cfcce);
+            
+        
+
+        circle_marker_c06f3f646de5d2540ee809c7659fbcbb.bindPopup(popup_37d0dcbfa2ddbad567448ef4c98e1e57)
+        ;
+
+        
+    
+    
+            var circle_marker_087ba1b25cd36a538781c8466f65113e = L.circleMarker(
+                [49.6104481, 6.1268351],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_129859451672b987f6a49ff078c0dbe2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b53b5fcee211be49ce11e52edbfce78c = $(`<div id="html_b53b5fcee211be49ce11e52edbfce78c" style="width: 100.0%; height: 100.0%;"><b>Weinachter, Emile</b><br>Адрес: Rue Aldringer, 16</div>`)[0];
+                popup_129859451672b987f6a49ff078c0dbe2.setContent(html_b53b5fcee211be49ce11e52edbfce78c);
+            
+        
+
+        circle_marker_087ba1b25cd36a538781c8466f65113e.bindPopup(popup_129859451672b987f6a49ff078c0dbe2)
+        ;
+
+        
+    
+    
+            var circle_marker_2391c7568cdb0b130735bdcfda1193b7 = L.circleMarker(
+                [49.6065183, 6.1270334],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_d4bcc9b1bda97713a2f2450a393fa1ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_806a0b43948da557127c336a1a6345b4 = $(`<div id="html_806a0b43948da557127c336a1a6345b4" style="width: 100.0%; height: 100.0%;"><b>Welter, J.-P.</b><br>Адрес: 20. Rue Sainte-Zithe </div>`)[0];
+                popup_d4bcc9b1bda97713a2f2450a393fa1ae.setContent(html_806a0b43948da557127c336a1a6345b4);
+            
+        
+
+        circle_marker_2391c7568cdb0b130735bdcfda1193b7.bindPopup(popup_d4bcc9b1bda97713a2f2450a393fa1ae)
+        ;
+
+        
+    
+    
+            var circle_marker_92e65a6190dad001c96555e216bdc08d = L.circleMarker(
+                [49.6334837, 6.1356696],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_93a2ccefd0128c2eaf2ce5b5a063677c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c22efcabf688c37f30e554ade24a8e29 = $(`<div id="html_c22efcabf688c37f30e554ade24a8e29" style="width: 100.0%; height: 100.0%;"><b>Schroeder, Raoul</b><br>Адрес: Rue de Beggen, 12</div>`)[0];
+                popup_93a2ccefd0128c2eaf2ce5b5a063677c.setContent(html_c22efcabf688c37f30e554ade24a8e29);
+            
+        
+
+        circle_marker_92e65a6190dad001c96555e216bdc08d.bindPopup(popup_93a2ccefd0128c2eaf2ce5b5a063677c)
+        ;
+
+        
+    
+    
+            var circle_marker_1c25eb7eb01d83fd34c383513d0976e6 = L.circleMarker(
+                [49.6057284, 6.1256101],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_5c841296162bec34ad07345627a31ebc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2327869a17626d3d3147d8c5819d2592 = $(`<div id="html_2327869a17626d3d3147d8c5819d2592" style="width: 100.0%; height: 100.0%;"><b>Wilwers, Alphonse</b><br>Адрес: Caspar Mathias Spoo, 64</div>`)[0];
+                popup_5c841296162bec34ad07345627a31ebc.setContent(html_2327869a17626d3d3147d8c5819d2592);
+            
+        
+
+        circle_marker_1c25eb7eb01d83fd34c383513d0976e6.bindPopup(popup_5c841296162bec34ad07345627a31ebc)
+        ;
+
+        
+    
+    
+            var circle_marker_3f0399ea7c285a5491454cc5b0fa08cc = L.circleMarker(
+                [49.6120999, 6.1272266],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_fe4609ae15084167e6ba6604ef466db7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4fcab3cc3a3c1ae9380587259236b7f = $(`<div id="html_b4fcab3cc3a3c1ae9380587259236b7f" style="width: 100.0%; height: 100.0%;"><b>Stoffel, René</b><br>Адрес: Grand rue, 97</div>`)[0];
+                popup_fe4609ae15084167e6ba6604ef466db7.setContent(html_b4fcab3cc3a3c1ae9380587259236b7f);
+            
+        
+
+        circle_marker_3f0399ea7c285a5491454cc5b0fa08cc.bindPopup(popup_fe4609ae15084167e6ba6604ef466db7)
+        ;
+
+        
+    
+    
+            var circle_marker_d3f3973b7d1a3ebb88e2f7537c7a8611 = L.circleMarker(
+                [49.6107708, 6.1282144],
+                {"bubblingMouseEvents": true, "color": "#4A6FA5", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
+            ).addTo(map_60c56815cdaea9b73b0017f0a13271ee);
+        
+    
+        var popup_d26cf9745531912ee388cd4c8a932bd2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_633b133a119616a02a14aecf33ce1e0f = $(`<div id="html_633b133a119616a02a14aecf33ce1e0f" style="width: 100.0%; height: 100.0%;"><b>Montbrun, Camille</b><br>Адрес: rue Philippe, 21</div>`)[0];
+                popup_d26cf9745531912ee388cd4c8a932bd2.setContent(html_633b133a119616a02a14aecf33ce1e0f);
+            
+        
+
+        circle_marker_d3f3973b7d1a3ebb88e2f7537c7a8611.bindPopup(popup_d26cf9745531912ee388cd4c8a932bd2)
+        ;
+
+        
+    
+</script>
+</html>
