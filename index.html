@@ -57,11 +57,10 @@
         }
     );
 
-    // Считываем ключ из ссылки, а если его нет — подставляем ваш рабочий ключ
+    // Автоматически подставляем ваш рабочий ключ CARTO
     const urlParams = new URLSearchParams(window.location.search);
     const apiKey = urlParams.get('key') || 'cb1_4we6_1_586b2a61bf83033ced6f1630';
 
-    // Формируем URL для растровых тайлов CARTO Voyager с вашим ключом
     var tileUrl = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=" + apiKey;
 
     var tile_layer_ed442ee463b67e9023271e86168cd80a = L.tileLayer(
@@ -81,7 +80,7 @@
 
     tile_layer_ed442ee463b67e9023271e86168cd80a.addTo(map_0e3a70132c10f680f2a5ff20bb295228);
 
-    // --- Ваши маркеры ---
+    // Ваши маркеры
     var circle_marker_4285682ec64fbbba8d2afdfabf9b0cc0 = L.circleMarker(
         [49.6094559, 6.129029],
         {"bubblingMouseEvents": true, "color": "#4A6FA5", "fill": true, "fillColor": "#4A6FA5", "fillOpacity": 0.7, "opacity": 1.0, "radius": 4, "stroke": true, "weight": 3}
